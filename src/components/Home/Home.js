@@ -32,7 +32,7 @@ function Image(props) {
                     <CardMedia
                         component="img"
                         alt="Image Cat"
-                        // height="500px"
+                        // height=""
                         image={props.src}
                         title="Contemplative Reptile"
                     />
@@ -104,6 +104,13 @@ function Home(props) {
                 </Grid>
                 <Grid item md={12}>
                     <Images image1={image1} image2={image2} loadImage={loadImage} />
+                </Grid>
+                <Grid item md={12}>
+                    <Paper>
+                        <Typography style={{textAlign: "center"}}>
+                            Made with 😽 by tuanio. But tuanio sẽ không chịu trách nhiệm khi tự dưng có một cô hổ, sư tử hay là chú chó nào đó giả dạng mèo để đi vào cuộc thi này đâu nha. 
+                        </Typography>
+                    </Paper>
                 </Grid>
             </Grid>
         </>
