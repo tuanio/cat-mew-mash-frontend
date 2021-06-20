@@ -5,6 +5,7 @@ import { backendRoute } from '../../helper';
 import { baseUrl } from '../../helper';
 import { Card, CardMedia, CardActionArea, Paper, Button, Link } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 
 function Image(props) {
@@ -82,40 +83,42 @@ function Home(props) {
     }, [image1, image2]);
     return (
         <>
-            <Grid container spacing={1} justify="center">
-                <Grid item md={12}>
-                    <Paper>
-                        <Button>
-                            <Link href={`/leaderboard`}>
-                                Bảng phong thần mèo
-                            </Link>
-                        </Button>
-                    </Paper>
+            <Container>
+                <Grid container spacing={1} justify="center">
+                    <Grid item md={12}>
+                        <Paper>
+                            <Button>
+                                <Link href={`/leaderboard`}>
+                                    Bảng phong thần mèo
+                                </Link>
+                            </Button>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={12}>
+                        <Paper>
+                            <Typography variant="h5" style={{ textAlign: "center" }}>
+                                Chú mèo nào đáng yêu nhất nào.
+                            </Typography>
+                            <Typography style={{ textAlign: "center" }}>
+                                Bạn được toàn quyền quyết định, bạn trẻ à. Mew
+                            </Typography>
+                            <Typography style={{ textAlign: "center" }}>
+                                Cứ chọn chú mèo nào bạn thích, hệ thống sẽ gửi cho bạn xem những chú mèo khác, rồi chúng sẽ lại đấu với nhau. Những chú mèo được chọn nhiều nhất sẽ nằm trên top bảng phong thần đó.
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                    <Grid item md={12}>
+                        <Images image1={image1} image2={image2} loadImage={loadImage} />
+                    </Grid>
+                    <Grid item md={12}>
+                        <Paper>
+                            <Typography style={{ textAlign: "center" }}>
+                                Made with 😽 by tuanio. But tuanio sẽ không chịu trách nhiệm khi tự dưng có một cô hổ, sư tử hay là chú chó nào đó giả dạng mèo để đi vào cuộc thi này đâu nha. 
+                            </Typography>
+                        </Paper>
+                    </Grid>
                 </Grid>
-                <Grid item md={12}>
-                    <Paper>
-                        <Typography variant="h5" style={{ textAlign: "center" }}>
-                            Chú mèo nào đáng yêu nhất nào.
-                        </Typography>
-                        <Typography style={{ textAlign: "center" }}>
-                            Bạn được toàn quyền quyết định, bạn trẻ à. Mew
-                        </Typography>
-                        <Typography style={{ textAlign: "center" }}>
-                            Cứ chọn chú mèo nào bạn thích, hệ thống sẽ gửi cho bạn xem những chú mèo khác, rồi chúng sẽ lại đấu với nhau. Những chú mèo được chọn nhiều nhất sẽ nằm trên top bảng phong thần đó.
-                        </Typography>
-                    </Paper>
-                </Grid>
-                <Grid item md={12}>
-                    <Images image1={image1} image2={image2} loadImage={loadImage} />
-                </Grid>
-                <Grid item md={12}>
-                    <Paper>
-                        <Typography style={{textAlign: "center"}}>
-                            Made with 😽 by tuanio. But tuanio sẽ không chịu trách nhiệm khi tự dưng có một cô hổ, sư tử hay là chú chó nào đó giả dạng mèo để đi vào cuộc thi này đâu nha. 
-                        </Typography>
-                    </Paper>
-                </Grid>
-            </Grid>
+            </Container>
         </>
     )
 }
