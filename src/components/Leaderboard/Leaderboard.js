@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import { backendRoute } from '../../helper';
 import { baseUrl } from '../../helper';
-import { Card, CardMedia, CardActionArea, Typography, Paper } from '@material-ui/core';
+import { Card, CardMedia, CardActionArea, Typography, Paper, CardContent } from '@material-ui/core';
 
 function Catview(props) {
     console.log(props.src);
@@ -18,6 +18,11 @@ function Catview(props) {
                             // height="400px"
                             title="Contemplative Reptile"
                         />
+                        <CardContent>
+                            <Typography variant="h5" component="h2">
+                                Vote: {props.ranking}
+                            </Typography>
+                        </CardContent>
                     </CardActionArea>
                 </Card>
             </Grid>
@@ -50,7 +55,7 @@ function Leaderboard(props) {
                 </Grid>
                 {
                     listCat.map(item => 
-                        <Catview src={baseUrl + item.path} />
+                        <Catview src={baseUrl + item.path} ranking={item.ranking} />
                     )
                 }
                 <Grid item md={12}>
