@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import { backendRoute } from '../../helper';
 import { baseUrl } from '../../helper';
-import { Card, CardMedia, CardActionArea, Typography } from '@material-ui/core';
+import { Card, CardMedia, CardActionArea, Typography, Paper } from '@material-ui/core';
 
 function Catview(props) {
     console.log(props.src);
