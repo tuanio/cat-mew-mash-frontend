@@ -53,6 +53,13 @@ function Leaderboard(props) {
                         <Catview src={baseUrl + item.path} />
                     )
                 }
+                <Grid item md={12}>
+                    <Paper>
+                        <Typography style={{textAlign: "center"}}>
+                            Chú mèo nào được chọn nhiều nhất từ tất cả quý vị sẽ được nhảy lên trên đây ngồi á nha.
+                        </Typography>
+                    </Paper>
+                </Grid>
             </Grid>
         </>
     )
