@@ -6,11 +6,11 @@ import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
 import { IconButton } from '@material-ui/core';
 
 function SoundButton(props) {
-    const [buttonIcon, setButtonIcon] = useState(<VolumeMuteIcon />);
+    const [buttonIcon, setButtonIcon] = useState(<VolumeUpIcon />);
     const [flag, setFlag] = useState(true);
     
     const doClick = () => {
-        if (flag === true) {
+        if (!flag) {
             setButtonIcon(<VolumeUpIcon />);
         } else {
             setButtonIcon(<VolumeMuteIcon />);
