@@ -50,7 +50,7 @@ function Leaderboard(props) {
             <Grid container spacing={1} justify="center">
                 <Grid item md={8} xs={12}>
                     <Paper>
-                        <Typography variant="h5" style={{textAlign: "center"}}>
+                        <Typography variant="h5" style={{ textAlign: "center" }}>
                             Top 10 chú mèo đáng yêu nhất vũ trụ
                         </Typography>
                     </Paper>
@@ -65,7 +65,7 @@ function Leaderboard(props) {
                 }
                 <Grid item md={12}>
                     <Paper>
-                        <Typography style={{textAlign: "center"}}>
+                        <Typography style={{ textAlign: "center" }}>
                             Chú mèo nào được chọn nhiều nhất từ tất cả quý vị sẽ được nhảy lên trên đây ngồi á nha.
                         </Typography>
                     </Paper>

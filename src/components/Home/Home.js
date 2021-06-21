@@ -88,7 +88,9 @@ function Home(props) {
                         <Paper>
                             <Button>
                                 <Link href={`/leaderboard`}>
-                                    Bảng phong thần mèo
+                                    <Typography variant="h6" style={{ fontFamily: "Open Sans" }}>
+                                        Bảng phong thần mèo
+                                    </Typography>
                                 </Link>
                             </Button>
                         </Paper>
