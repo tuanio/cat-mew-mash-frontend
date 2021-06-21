@@ -32,18 +32,22 @@ function Catview(props) {
 
 function Leaderboard(props) {
     const [listCat, setListCat] = useState([]);
+    const [allVote, setAllVote] = useState(0);
 
     useEffect(() => {
         async function loadImage() {
-            let req = await fetch(`${backendRoute}/get-leaderboard`);
-            let res = await req.json();
-            res = res.data;
-            setListCat(res);
+            let leaderboardReq = await fetch(`${backendRoute}/get-leaderboard`);
+            let leaderboardRes = await leaderboardReq.json();
+            leaderboardRes = leaderboardRes.data;
+            setListCat(leaderboardRes);
+
+            let voteReq = await fetch(`${backendRoute}/get-all-vote`);
+            let voteRes = await voteReq.json();
+            voteRes = voteRes.data;
+            setAllVote(voteRes);
         }
         loadImage();
-        console.log(listCat);
-    }, [listCat])
-
+    }, [listCat]);
 
     return (
         <>
@@ -52,7 +56,12 @@ function Leaderboard(props) {
                     <Grid item md={8} xs={12}>
                         <Paper>
                             <Typography variant="h5" style={{ textAlign: "center" }}>
-                                Top 10 chú mèo đáng yêu nhất vũ trụ
+                                Top 10 chú mèo đáng yêu nhất vũ trụ 😽
+                            </Typography>
+                        </Paper>
+                        <Paper>
+                            <Typography variant="h5" style={{ textAlign: "center" }}>
+                                Những chú mèo ở đây đã đứng đầu trên tổng số {allVote} vote đó nha 👏
                             </Typography>
                         </Paper>
                     </Grid>

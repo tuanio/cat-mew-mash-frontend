@@ -39,7 +39,7 @@ function Image(props) {
                 </CardActionArea>
             </Card>
         </>
-    )
+    );
 }
 
 function Images(props) {
