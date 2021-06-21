@@ -3,9 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import { backendRoute } from '../../helper';
 import { baseUrl } from '../../helper';
 import { Card, CardMedia, CardActionArea, Typography, Paper, CardContent } from '@material-ui/core';
+import SoundButton from '../Addon';
 
 function Catview(props) {
-    console.log(props.src);
     return (
         <>
             <Grid item md={3} xs={6}>
@@ -47,11 +47,16 @@ function Leaderboard(props) {
 
     return (
         <>
-            <Grid container spacing={1}>
-                <Grid item xs={12}>
-                    <Typography variant="h5" style={{textAlign: "center"}}>
-                        Top 10 chú mèo đáng yêu nhất vũ trụ
-                    </Typography>
+            <Grid container spacing={1} justify="center">
+                <Grid item md={8} xs={12}>
+                    <Paper>
+                        <Typography variant="h5" style={{textAlign: "center"}}>
+                            Top 10 chú mèo đáng yêu nhất vũ trụ
+                        </Typography>
+                    </Paper>
+                </Grid>
+                <Grid item md={4} xs={12}>
+                    <SoundButton />
                 </Grid>
                 {
                     listCat.map(item => 

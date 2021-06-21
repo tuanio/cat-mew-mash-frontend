@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { backendRoute } from '../../helper';
 import { baseUrl } from '../../helper';
 import { Card, CardMedia, CardActionArea, Paper, Button, Link } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
-
+import SoundButton from '../Addon';
 
 function Image(props) {
     const vote = async () => {
@@ -33,7 +32,7 @@ function Image(props) {
                     <CardMedia
                         component="img"
                         alt="Image Cat"
-                        // height=""
+                        height={"500em"}
                         image={props.src}
                         title="Contemplative Reptile"
                     />
@@ -85,7 +84,7 @@ function Home(props) {
         <>
             <Container>
                 <Grid container spacing={1} justify="center">
-                    <Grid item md={12}>
+                    <Grid item md={8} xs={12}>
                         <Paper>
                             <Button>
                                 <Link href={`/leaderboard`}>
@@ -93,6 +92,9 @@ function Home(props) {
                                 </Link>
                             </Button>
                         </Paper>
+                    </Grid>
+                    <Grid item md={4} xs={12}>
+                        <SoundButton />
                     </Grid>
                     <Grid item md={12}>
                         <Paper>
@@ -118,6 +120,7 @@ function Home(props) {
                         </Paper>
                     </Grid>
                 </Grid>
+                
             </Container>
         </>
     )
