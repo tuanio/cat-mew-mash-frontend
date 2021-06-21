@@ -20,16 +20,18 @@ function SoundButton(props) {
 
     return (
         <>
-            <Grid container>
+            <Grid container justify="center">
                 <Grid item md={12} xs={12}>
-                    <IconButton color="primary" onClick={doClick}>
-                        {
-                            buttonIcon
-                        }
-                        <Typography>
-                            cute songs to help you cope with depression
-                        </Typography>
-                    </IconButton>
+                    <Paper>
+                        <IconButton color="primary" onClick={doClick}>
+                            {
+                                buttonIcon
+                            }
+                            <Typography>
+                                cute songs to help you cope with depression
+                            </Typography>
+                        </IconButton>
+                    </Paper>
                 </Grid>
                 <Grid item md={12} xs={12}>
                     <Paper>

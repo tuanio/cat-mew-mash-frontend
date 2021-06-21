@@ -124,7 +124,6 @@ function Home(props) {
                         </Paper>
                     </Grid>
                 </Grid>
-                
             </Container>
         </>
     )
