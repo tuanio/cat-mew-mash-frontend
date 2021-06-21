@@ -106,15 +106,17 @@ function Home(props) {
                             <Typography style={{ textAlign: "center" }}>
                                 Bạn được toàn quyền quyết định, bạn trẻ à. Mew
                             </Typography>
-                            <Typography style={{ textAlign: "center" }}>
-                                Cứ chọn chú mèo nào bạn thích, hệ thống sẽ gửi cho bạn xem những chú mèo khác, rồi chúng sẽ lại đấu với nhau. Những chú mèo được chọn nhiều nhất sẽ nằm trên top bảng phong thần đó.
-                            </Typography>
                         </Paper>
                     </Grid>
                     <Grid item md={12}>
                         <Images image1={image1} image2={image2} loadImage={loadImage} />
                     </Grid>
                     <Grid item md={12}>
+                        <Paper>
+                            <Typography style={{ textAlign: "center" }}>
+                                Cứ chọn chú mèo nào bạn thích, hệ thống sẽ gửi cho bạn xem những chú mèo khác, rồi chúng sẽ lại đấu với nhau. Những chú mèo được chọn nhiều nhất sẽ nằm trên top bảng phong thần đó.
+                            </Typography>
+                        </Paper>
                         <Paper>
                             <Typography style={{ textAlign: "center" }}>
                                 Made with 😽 by tuanio. But tuanio sẽ không chịu trách nhiệm khi tự dưng có một cô hổ, sư tử hay là chú chó nào đó giả dạng mèo để đi vào cuộc thi này đâu nha. 
