@@ -27,7 +27,7 @@ function SoundButton(props) {
                             buttonIcon
                         }
                         <Typography>
-                            Playing: cute songs to help you cope with depression
+                            cute songs to help you cope with depression
                         </Typography>
                     </IconButton>
                 </Grid>

@@ -100,11 +100,11 @@ function Home(props) {
                     </Grid>
                     <Grid item md={12}>
                         <Paper>
-                            <Typography variant="h5" style={{ textAlign: "center" }}>
-                                Chú mèo nào đáng yêu nhất nào.
+                            <Typography variant="h6" style={{ textAlign: "center" }}>
+                                Chú mèo nào đáng yêu nhất nào
                             </Typography>
                             <Typography style={{ textAlign: "center" }}>
-                                Bạn được toàn quyền quyết định, bạn trẻ à. Mew
+                                Bạn được toàn quyền quyết định, bạn trẻ à. Meoww
                             </Typography>
                         </Paper>
                     </Grid>
